@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
         description: req.body.description,
         category: req.body.category,
         price: req.body.price,
-        url: `http://localhost:3000/images/${filename}`
+        url: `https://marketplace-backend-master.herokuapp.com//images/${filename}`
     })
     await product
     .save()

@@ -2,14 +2,7 @@ const ProductModel = require('../model/ProductModel');
 
 class ProductController{
     async create(req, res){
-        //const product = new ProductModel(req.body);
-        const product = new ProductModel({
-            title: req.title,
-            description: req.description,
-            category: req.category,
-            price: req.price,
-            url: req.url
-        })
+        const product = new ProductModel(req.body);
         await product
         .save()
         .then(response => {
